@@ -1,0 +1,17 @@
+[
+{
+    "repository": "boulzordev/android_kernel_motorola_msm8953",
+    "target_path": "kernel/motorola/msm8953",
+    "branch":      "lineage-15.0-64"
+  },
+{
+    "repository": "boulzordev/android_vendor_motorola_potter",
+    "target_path": "vendor/motorola/potter",
+    "branch":      "lineage-15.1-64"
+  },
+{
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "staging/lineage-15.1"
+  },
+]
