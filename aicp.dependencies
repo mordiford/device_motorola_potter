@@ -1,0 +1,17 @@
+[
+{
+    "repository": "mordiford/iris-g5p-kernel",
+    "target_path": "kernel/motorola/msm8953",
+    "branch":      "iris-v1"
+  },
+{
+    "repository": "boulzordev/android_vendor_motorola_potter",
+    "target_path": "vendor/motorola/potter",
+    "branch":      "lineage-15.1-64"
+  },
+{
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "staging/lineage-15.1"
+  }
+]
