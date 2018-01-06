@@ -1,8 +1,8 @@
 [
 {
-    "repository": "anshuman852/alize_potter",
+    "repository": "mordiford/iris-g5p-kernel",
     "target_path": "kernel/motorola/msm8953",
-    "branch":      "a8x-eas"
+    "branch":      "iris-v1"
   },
 {
     "repository": "boulzordev/android_vendor_motorola_potter",
