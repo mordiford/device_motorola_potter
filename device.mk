@@ -369,7 +369,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.lineage
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 
 PRODUCT_PACKAGES += \
     vndk-sp
@@ -378,7 +379,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    libqsap_sdk \
     libwpa_client \
     wcnss_service \
     wificond \
