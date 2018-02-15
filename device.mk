@@ -181,18 +181,15 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# GNSS HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
-
 # GPS
 PRODUCT_PACKAGES += \
-    libgps.utils \
-    gps.default \
     libgnss \
-    liblocation_api \
+    libgnsspps \
     android.hardware.gnss@1.0-impl-qti \
-    libloc_api-rpc-qc
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0-service-qti \
+    libqsap_sdk \
+    libqsap_shim
 
 # health
 PRODUCT_PACKAGES += \
@@ -296,6 +293,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
+# Qualcomm
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfigs/qti_whitelist.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.fm.sh \
@@ -356,9 +358,17 @@ PRODUCT_PACKAGES += \
     sensors.tof \
     sensors.tof.vl53l0
 
+# Shims
+PRODUCT_PACKAGES += \
+    libqsap_shim
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-potter.conf:system/vendor/etc/thermal-engine.conf
+
+# TextClassifier smart selection model files
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
 
 # USB HAL
 PRODUCT_PACKAGES += \
@@ -376,6 +386,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
+    libqsap_sdk \
     libwpa_client \
     wcnss_service \
     wificond \
