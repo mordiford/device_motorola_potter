@@ -213,6 +213,8 @@ persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 persist.data.iwlan.enable=true
 
+persist.vendor.radio.add_power_save=1
+
 # RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
@@ -223,6 +225,9 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
+
+#Trim properties
+ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # USB
 ro.usb.mtp=0x2e82
