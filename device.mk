@@ -147,7 +147,9 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libgenlock \
-    libtinyxml
+    libtinyxml \
+    libdisplayconfig \
+    libqdMetaData.system
 
 PRODUCT_PACKAGES += android.hardware.media.omx
 
