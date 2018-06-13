@@ -85,8 +85,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := potter_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
+TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_USE_SDCLANG := true
 
 # Audio
@@ -195,6 +194,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 26401026048 # 25782252 * 1024 mmcblk0p54
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
+# Power
+TARGET_HAS_NO_WIFI_STATS := true
+
 # QC flags
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
@@ -231,9 +233,6 @@ MOT_SENSOR_HUB_FEATURE_GR := true
 # Shim
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/adspd|libshim_adsp.so \
-    /system/lib/lib_motsensorlistener.so|libsensor.so \
-    /system/lib/libjustshoot.so|libshims_camera.so \
-    /system/lib/hw/camera.msm8953.so|libshim_camera_hal.so \
     /system/vendor/lib64/libmdmcutback.so|libqsap_shim.so
 
 # Wifi
